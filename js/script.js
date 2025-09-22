@@ -1,29 +1,40 @@
-// Seleciona todos os elementos com a classe "fade-in" para animação
-const fadeElements = document.querySelectorAll('.fade-in');
+// Menu Responsivo
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector("header nav ul");
 
-// Função que adiciona a animação
-const fadeInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
     });
-}, {
-    threshold: 0.5  // Quando 50% do elemento estiver visível
+  });
 });
 
-// Observa cada elemento da classe "fade-in"
-fadeElements.forEach(element => {
-    fadeInObserver.observe(element);
-});
+// Galeria Auto-Slide
+let gallery = document.querySelector(".gallery");
+if (gallery) {
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % gallery.children.length;
+    gallery.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000);
+}
 
-// Adicionando animação para a imagem no header
-const headerImage = document.querySelector('.header-image img');
-headerImage.addEventListener('mouseover', () => {
-    headerImage.style.transform = 'scale(1.1)';
-});
-
-headerImage.addEventListener('mouseout', () => {
-    headerImage.style.transform = 'scale(1)';
+// Animações ao Scroll
+const elements = document.querySelectorAll(".card, .contact");
+window.addEventListener("scroll", () => {
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    }
+  });
 });

@@ -1,90 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Daniel Grazina</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guitarras Elétricas — Showroom</title>
+  <meta name="description" content="guitarras elétricas" />
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Home -->
-    <section id="home">
-        <div class="container">
-            <h1 class="fade-in">Olá, sou Daniel Grazina</h1>
-            <p class="fade-in">Programador de informatica | Amante de tecnologia | Sempre pronto a aprender</p>
-            <a href="#sobre" class="cta-btn">Saiba mais</a>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">GE</div>
+        <div>
+          <div style="font-size:0.95rem">Guitarras Elétricas</div>
+          <div style="font-size:0.72rem;color:var(--muted)">Showroom • Modelos • Especificações</div>
         </div>
-    </section>
+      </div>
 
-    <!-- Sobre Mim -->
-    <section id="sobre">
-        <div class="container">
-            <h2 class="slide-in">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="text fade-in">
-                    <p>Sou um programador de informatica com expêriencia em várias tecnologias. Gosto de fazer busaca de novos desafios. Gosto imenso de música 🎸 e Formula 1 🏎️.</p>
-                    <a href="#projetos" class="cta-btn">Ver Projetos</a>
-                </div>
-                <div class="image fade-in">
-                    <img src="img/my_pic.png" alt="Daniel Grazina">
-                </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#modelos">Modelos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-btn btn ghost" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-card reveal">
+        <div class="eyebrow">EXPOSIÇÃO 2025</div>
+        <h1>Guitarras elétricas — som, construção e estilo</h1>
+        <p class="lead">Descobre modelos clássicos e modernos, especificações técnicas, e uma galeria com detalhes — tudo otimizado para desktop e telemóvel.</p>
+
+        <div class="cta-row">
+          <button class="btn">Ver Modelos</button>
+          <button class="btn ghost">Contactar Vendedor</button>
+        </div>
+
+        <div class="showcase">
+          <div class="guitar-hero">
+            <div class="guitar-image" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Guitarra elétrica" />
             </div>
-        </div>
-    </section>
-
-    <!-- Projetos -->
-    <section id="projetos">
-        <div class="container">
-            <h2 class="slide-in">Meus Projetos</h2>
-            <div class="projects-grid">
-                <div class="project zoom-in">
-                    <h3>Projeto 1 - HTML</h3>
-                    <p>Algumas páginas que mostram o meu aprendizado com o html, css e bootstrap.</p>
-                    <a href="https://github.com/DanielGrazina/Daniel_Grazina_TPSI0525/tree/69931797c4594b85895cddb3e9b434cc70a357a5/HTML" target="_blank">Ver no GitHub</a>
-                </div>
-                <div class="project zoom-in">
-                    <h3>Projeto 2 - JavaScript</h3>
-                    <p>Exercicios de JavaScript para mostrar algum do meu conhecimento com JavaScript.</p>
-                    <a href="https://github.com/DanielGrazina/Daniel_Grazina_TPSI0525/tree/69931797c4594b85895cddb3e9b434cc70a357a5/JavaScript2" target="_blank">Ver no GitHub</a>
-                </div>
+            <div style="display:flex;gap:12px;align-items:center">
+              <div style="flex:1">
+                <strong>Modelo:</strong> Strat Classic • <span class="specs">Maple neck • Single-coil</span>
+              </div>
+              <div style="font-weight:700;color:var(--accent)">€1.299</div>
             </div>
+          </div>
         </div>
+
+        <svg class="wavesvg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ff6b6b"/>
+              <stop offset="1" stop-color="#ffd36b"/>
+            </linearGradient>
+          </defs>
+          <path d="M300 10 C380 10 520 70 560 180 C600 290 520 420 420 480 C320 540 180 520 80 470 C-20 420 -20 320 20 220 C60 120 220 10 300 10Z" fill="url(#g1)"/>
+        </svg>
+      </div>
+
+      <aside style="position:relative">
+        <div class="card reveal" style="padding:18px">
+          <h3>Escolha Rápida</h3>
+          <p class="specs">Se procuras sustain, escolhe humbuckers. Para brilho e definição, single coils.</p>
+          <ul style="margin:8px 0 0;color:var(--muted)">
+            <li>Corpo: Alder / Mahogany</li>
+            <li>Braço: Maple / Rosewood</li>
+            <li>Pickups: Single / Humbucker / P90</li>
+          </ul>
+        </div>
+
+        <div class="card pulse" style="margin-top:14px;">
+          <h4>Demo rápida</h4>
+          <p class="specs">Toca amostras, compara captadores e testa efeitos.</p>
+        </div>
+      </aside>
+
     </section>
 
-    <!-- Habilidades -->
-    <section id="habilidades">
-        <div class="container">
-            <h2 class="slide-in">Minhas Habilidades</h2>
-            <div class="skills">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">C#</div>
-                <div class="skill">Python</div>
-                <div class="skill">C/C++</div>
-                <div class="skill">Java</div>
+    <section id="modelos" class="grid" aria-label="Modelos de guitarras">
+      <article class="card reveal">
+        <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Modelo 1" style="width:100%;border-radius:10px;object-fit:cover;height:160px"/>
+        <h3>Strat Classic</h3>
+        <div class="specs">Maple neck • 3x Single-Coil • Tremolo</div>
+      </article>
+
+      <article class="card reveal">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Modelo 2" style="width:100%;border-radius:10px;object-fit:cover;height:160px"/>
+        <h3>Les Paul Retro</h3>
+        <div class="specs">Mahogany • 2x Humbuckers • Set neck</div>
+      </article>
+
+      <article class="card reveal">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Modelo 3" style="width:100%;border-radius:10px;object-fit:cover;height:160px"/>
+        <h3>Tele Tones</h3>
+        <div class="specs">Alder • Bridge Single-Coil • Twang clássico</div>
+      </article>
+
+    </section>
+
+    <section id="galeria" class="gallery">
+      <div class="carousel" aria-roledescription="carousel">
+        <div class="slides" id="slides">
+          <div class="slide">
+            <div>
+              <h3>Detalhes do corpo</h3>
+              <p class="specs">Acabamento nitro, contornos ergonómicos e binding. Tapa de faia em modelos top.</p>
             </div>
+            <div><img src="https://images.unsplash.com/photo-1526178615686-8a2f6ed1b8b2?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Detalhe do corpo"/></div>
+          </div>
+
+          <div class="slide">
+            <div>
+              <h3>Escalas e trastes</h3>
+              <p class="specs">Raio da escala e número de trastes influenciam a tocabilidade. Olha o acabamento nas bordas (fretwork).</p>
+            </div>
+            <div><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Escala"/></div>
+          </div>
+
         </div>
+
+        <button class="carousel-btn left" id="prev" aria-label="Slide anterior">◀</button>
+        <button class="carousel-btn right" id="next" aria-label="Próximo slide">▶</button>
+      </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-        <div class="container">
-            <h2 class="slide-in">Contacto</h2>
-            <form>
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="E-mail" required>
-                <textarea placeholder="Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+    <section id="contactos" style="max-width:1200px;margin:18px auto;padding:0 20px">
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:18px">
+        <div class="card reveal">
+          <h3>Contactos</h3>
+          <p class="specs">Email: vendas@guitarraselétricas.exemplo • Tel: +351 900 000 000</p>
+          <form onsubmit="event.preventDefault(); alert('Mensagem enviada — isto é um demo.');" style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+            <input aria-label="Nome" placeholder="Nome" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required/>
+            <input aria-label="Email" placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required/>
+            <textarea aria-label="Mensagem" placeholder="Mensagem" rows="4" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required></textarea>
+            <button class="btn" type="submit">Enviar</button>
+          </form>
         </div>
+
+        <aside class="card reveal" style="padding:18px;align-self:start">
+          <h4>Horário</h4>
+          <p class="specs">Seg — Sex: 10:00 — 19:00 • Sáb: 10:00 — 14:00</p>
+          <h4 style="margin-top:12px">Local</h4>
+          <p class="specs">Rua da Música, 45 — Lisboa, Portugal</p>
+        </aside>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Daniel Grazina. Todos os direitos reservados.</p>
-    </footer>
+  </main>
 
-    <script src="js/script.js"></script>
+  <footer>
+    <div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center">
+      <div>© 2025 Guitarras Elétricas</div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

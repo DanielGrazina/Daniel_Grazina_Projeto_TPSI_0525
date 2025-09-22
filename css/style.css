@@ -1,358 +1,147 @@
-/* RESET GLOBAL */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1e1e2f;
-    color: #fff;
-    line-height: 1.6;
-    transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #111;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* --- SEÇÃO HOME --- */
-#home {
-    background: #3b3b5c;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+header {
+  background: #222;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 50px;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-content {
-    text-align: center;
-    max-width: 500px;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.header-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
 }
 
-.cta-btn {
-    background: #f39c12;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 30px;
-    transition: background 0.3s ease;
-    margin-top: 20px;
-    display: inline-block;
+header nav ul li a:hover {
+  color: #f39c12;
 }
 
-.cta-btn:hover {
-    background: #e67e22;
+.hero {
+  height: 100vh;
+  background: url("img/hero-guitar.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeInDown 2s ease;
 }
 
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  animation: fadeInUp 2s ease;
 }
 
-/* --- SEÇÃO SOBRE --- */
-#sobre {
-    background: #2c2c3f;
-    padding: 60px 20px;
-    text-align: center;
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-#sobre h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: slideIn 1s forwards;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+/* Seções */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-.about-content .text {
-    flex: 1;
-    text-align: left;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    margin-bottom: 20px;
+.models {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-.about-content .image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+.card {
+  background: #222;
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* --- SEÇÃO PROJETOS --- */
-#projetos {
-    background: #1e1e2f;
-    padding: 60px 20px;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-#projetos h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: slideIn 1s forwards;
+/* Galeria */
+.gallery {
+  display: flex;
+  overflow: hidden;
+  position: relative;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    justify-items: center;
+.gallery img {
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
 }
 
-.project {
-    background: #3b3b5c;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    width: 100%;
-    max-width: 350px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.contact {
+  background: #333;
+  padding: 3rem;
+  border-radius: 10px;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.project h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.project p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-.project a {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
-/* --- SEÇÃO HABILIDADES --- */
-#habilidades {
-    background: #2c2c3f;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#habilidades h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: slideIn 1s forwards;
-}
-
-.skills {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.skill {
-    background: #f39c12;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 20px;
-    transition: background 0.3s ease;
-}
-
-.skill:hover {
-    background: #e67e22;
-}
-
-/* --- SEÇÃO CONTACTO --- */
-#contacto {
-    background: #1e1e2f;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#contacto h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: slideIn 1s forwards;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-form button {
-    background: #f39c12;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 20px;
-}
-
-form button:hover {
-    background: #e67e22;
-}
-
-/* --- FOOTER --- */
 footer {
-    background: #3b3b5c;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+  background: #111;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* --- RESPONSIVO --- */
+/* Responsivo */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    display: none;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+  }
 
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
+  header nav ul.active {
+    display: flex;
+  }
 
-    .header-image img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .header-content {
-        text-align: center;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .project {
-        max-width: 100%;
-    }
-
-    .skills {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .skill {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    form input,
-    form textarea {
-        padding: 12px;
-    }
-
-    form button {
-        width: 80%;
-        padding: 12px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #home h1 {
-        font-size: 2em;
-    }
-
-    #home p {
-        font-size: 1em;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-
-    form button {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-
-    .header-image img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* --- ANIMAÇÕES ADICIONAIS --- */
-
-/* Animações para os elementos que entram na tela */
-.fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Efeito de Hover na Imagem */
-.header-image img {
-    transition: transform 0.3s ease;
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
 }
