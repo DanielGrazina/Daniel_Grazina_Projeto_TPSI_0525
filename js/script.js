@@ -1,40 +1,28 @@
-// Menu Responsivo
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector("header nav ul");
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
 
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-}
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('open');
+  mainNav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', navToggle.classList.contains('open'));
+});
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+document.querySelectorAll('.grid-3.featured .card img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
   });
 });
 
-// Galeria Auto-Slide
-let gallery = document.querySelector(".gallery");
-if (gallery) {
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % gallery.children.length;
-    gallery.style.transform = `translateX(-${index * 100}%)`;
-  }, 3000);
-}
+lightboxClose.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
 
-// Animações ao Scroll
-const elements = document.querySelectorAll(".card, .contact");
-window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-      el.style.opacity = 1;
-      el.style.transform = "translateY(0)";
-    }
-  });
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) lightbox.style.display = 'none';
 });

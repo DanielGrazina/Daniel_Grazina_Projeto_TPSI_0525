@@ -1,170 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Guitarras Elétricas — Showroom</title>
-  <meta name="description" content="guitarras elétricas" />
-
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Linkin Park - Início</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="logo">GE</div>
-        <div>
-          <div style="font-size:0.95rem">Guitarras Elétricas</div>
-          <div style="font-size:0.72rem;color:var(--muted)">Showroom • Modelos • Especificações</div>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">LINKIN PARK</a>
+
+            <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <!-- NAV -->
+            <nav id="mainNav" class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="paginas/historia.html">História</a></li>
+                    <li><a href="paginas/discografia.html">Discografia</a></li>
+                    <li><a href="paginas/membros.html">Membros</a></li>
+                    <li><a href="paginas/chester.html">Chester</a></li>
+                    <li><a href="paginas/videos.html">Vídeos</a></li>
+                    <li><a href="paginas/concertos.html">Concertos</a></li>
+                    <li><a href="paginas/curiosidades.html">Curiosidades</a></li>
+                    <li><a href="paginas/fans.html">Fãs</a></li>
+                    <li><a href="paginas/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <nav aria-label="Menu principal">
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#modelos">Modelos</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contactos">Contactos</a></li>
-        </ul>
-      </nav>
-
-      <button class="menu-btn btn ghost" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-card reveal">
-        <div class="eyebrow">EXPOSIÇÃO 2025</div>
-        <h1>Guitarras elétricas — som, construção e estilo</h1>
-        <p class="lead">Descobre modelos clássicos e modernos, especificações técnicas, e uma galeria com detalhes — tudo otimizado para desktop e telemóvel.</p>
-
-        <div class="cta-row">
-          <button class="btn">Ver Modelos</button>
-          <button class="btn ghost">Contactar Vendedor</button>
-        </div>
-
-        <div class="showcase">
-          <div class="guitar-hero">
-            <div class="guitar-image" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Guitarra elétrica" />
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="container hero-content">
+                    <h1>Linkin Park — Fan Site</h1>
+                    <p class="tagline">História, discografia, vídeos e momentos inesquecíveis.</p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="paginas/discografia.html">Explorar Discografia</a>
+                        <a class="btn outline" href="paginas/videos.html">Ver Vídeos</a>
+                    </div>
+                </div>
             </div>
-            <div style="display:flex;gap:12px;align-items:center">
-              <div style="flex:1">
-                <strong>Modelo:</strong> Strat Classic • <span class="specs">Maple neck • Single-coil</span>
-              </div>
-              <div style="font-weight:700;color:var(--accent)">€1.299</div>
+        </section>
+
+        <!-- Quem são -->
+        <section class="container intro">
+            <h2>Quem são os Linkin Park?</h2>
+            <p class="lead">Linkin Park é uma banda norte-americana formada em 1996, conhecida por misturar rock,
+                nu-metal e eletrónica. Explora a discografia, os membros e os concertos que marcaram os fãs.</p>
+        </section>
+
+        <section class="container grid-3 featured">
+            <!-- Album destaque -->
+            <article class="card">
+                <img src="img/From_Zero.jpg" alt="Capa de álbum" loading="lazy">
+                <h3>Álbum em destaque</h3>
+                <p>Breve descrição do álbum em destaque. Lançamento, singles e curiosidades.</p>
+                <a class="small-link" href="paginas/discografia.html">Ver discografia →</a>
+            </article>
+
+            <!-- Video destaque -->
+            <article class="card">
+                <h3>Vídeo em destaque</h3>
+                <div class="video-wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aujayq52PW0?si=oSkF4Q3QarCVtP8T"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+
+            <!-- Proximos concertos -->
+            <article class="card">
+                <h3>Próximos concertos</h3>
+                <p>Resumo dos eventos mais importantes — consulta a página de Concertos para mais detalhes.</p>
+                <a class="small-link" href="paginas/concertos.html">Ver concertos →</a>
+            </article>
+        </section>
+
+        <!-- Preview  da galeria -->
+        <section class="container gallery-preview">
+            <h2>Galeria</h2>
+            <div class="grid-4 thumbs">
+                <a href="paginas/videos.html"><img src="img/thumb1.jpg" alt="" loading="lazy"></a>
+                <a href="paginas/videos.html"><img src="img/thumb2.jpg" alt="" loading="lazy"></a>
+                <a href="paginas/videos.html"><img src="img/thumb3.jpg" alt="" loading="lazy"></a>
+                <a href="paginas/videos.html"><img src="img/thumb4.jpg" alt="" loading="lazy"></a>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <svg class="wavesvg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#ff6b6b"/>
-              <stop offset="1" stop-color="#ffd36b"/>
-            </linearGradient>
-          </defs>
-          <path d="M300 10 C380 10 520 70 560 180 C600 290 520 420 420 480 C320 540 180 520 80 470 C-20 420 -20 320 20 220 C60 120 220 10 300 10Z" fill="url(#g1)"/>
-        </svg>
-      </div>
+        <!-- CTA -->
+        <section class="container cta">
+            <h2>Queres contribuir?</h2>
+            <p>Envie-nos uma mensagem ou partilha as tuas fotos de concertos.</p>
+            <a class="btn primary" href="paginas/contacto.html">Contacto</a>
+        </section>
+    </main>
 
-      <aside style="position:relative">
-        <div class="card reveal" style="padding:18px">
-          <h3>Escolha Rápida</h3>
-          <p class="specs">Se procuras sustain, escolhe humbuckers. Para brilho e definição, single coils.</p>
-          <ul style="margin:8px 0 0;color:var(--muted)">
-            <li>Corpo: Alder / Mahogany</li>
-            <li>Braço: Maple / Rosewood</li>
-            <li>Pickups: Single / Humbucker / P90</li>
-          </ul>
-        </div>
-
-        <div class="card pulse" style="margin-top:14px;">
-          <h4>Demo rápida</h4>
-          <p class="specs">Toca amostras, compara captadores e testa efeitos.</p>
-        </div>
-      </aside>
-
-    </section>
-
-    <section id="modelos" class="grid" aria-label="Modelos de guitarras">
-      <article class="card reveal">
-        <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Modelo 1" style="width:100%;border-radius:10px;object-fit:cover;height:160px"/>
-        <h3>Strat Classic</h3>
-        <div class="specs">Maple neck • 3x Single-Coil • Tremolo</div>
-      </article>
-
-      <article class="card reveal">
-        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Modelo 2" style="width:100%;border-radius:10px;object-fit:cover;height:160px"/>
-        <h3>Les Paul Retro</h3>
-        <div class="specs">Mahogany • 2x Humbuckers • Set neck</div>
-      </article>
-
-      <article class="card reveal">
-        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Modelo 3" style="width:100%;border-radius:10px;object-fit:cover;height:160px"/>
-        <h3>Tele Tones</h3>
-        <div class="specs">Alder • Bridge Single-Coil • Twang clássico</div>
-      </article>
-
-    </section>
-
-    <section id="galeria" class="gallery">
-      <div class="carousel" aria-roledescription="carousel">
-        <div class="slides" id="slides">
-          <div class="slide">
-            <div>
-              <h3>Detalhes do corpo</h3>
-              <p class="specs">Acabamento nitro, contornos ergonómicos e binding. Tapa de faia em modelos top.</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="socials">
+                <a href="https://www.facebook.com/linkinpark/" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/linkinpark/" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCZU9T1ceaOgwfLRq7OKFU4Q" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
             </div>
-            <div><img src="https://images.unsplash.com/photo-1526178615686-8a2f6ed1b8b2?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Detalhe do corpo"/></div>
-          </div>
-
-          <div class="slide">
-            <div>
-              <h3>Escalas e trastes</h3>
-              <p class="specs">Raio da escala e número de trastes influenciam a tocabilidade. Olha o acabamento nas bordas (fretwork).</p>
-            </div>
-            <div><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Escala"/></div>
-          </div>
-
+            <p>&copy; 2025 — Projeto Escolar • Site não oficial de fãs.</p>
         </div>
+    </footer>
 
-        <button class="carousel-btn left" id="prev" aria-label="Slide anterior">◀</button>
-        <button class="carousel-btn right" id="next" aria-label="Próximo slide">▶</button>
-      </div>
-    </section>
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
 
-    <section id="contactos" style="max-width:1200px;margin:18px auto;padding:0 20px">
-      <div style="display:grid;grid-template-columns:1fr 340px;gap:18px">
-        <div class="card reveal">
-          <h3>Contactos</h3>
-          <p class="specs">Email: vendas@guitarraselétricas.exemplo • Tel: +351 900 000 000</p>
-          <form onsubmit="event.preventDefault(); alert('Mensagem enviada — isto é um demo.');" style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
-            <input aria-label="Nome" placeholder="Nome" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required/>
-            <input aria-label="Email" placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required/>
-            <textarea aria-label="Mensagem" placeholder="Mensagem" rows="4" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" required></textarea>
-            <button class="btn" type="submit">Enviar</button>
-          </form>
-        </div>
-
-        <aside class="card reveal" style="padding:18px;align-self:start">
-          <h4>Horário</h4>
-          <p class="specs">Seg — Sex: 10:00 — 19:00 • Sáb: 10:00 — 14:00</p>
-          <h4 style="margin-top:12px">Local</h4>
-          <p class="specs">Rua da Música, 45 — Lisboa, Portugal</p>
-        </aside>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center">
-      <div>© 2025 Guitarras Elétricas</div>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('open');
+            mainNav.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', navToggle.classList.contains('open'));
+        });
+    </script>
 </body>
+
 </html>
