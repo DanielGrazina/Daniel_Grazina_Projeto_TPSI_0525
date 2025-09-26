@@ -189,7 +189,7 @@ body {
    HERO
 ========================= */
 .hero {
-    background: url('../img/linkinpark_grupo.jpg') center/contain no-repeat;
+    background: url('../img/Outros/linkinpark_grupo.jpg') center/contain no-repeat;
     min-height: 60vh;
     display: flex;
     align-items: center;
