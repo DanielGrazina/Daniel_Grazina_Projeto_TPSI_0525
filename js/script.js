@@ -22,7 +22,7 @@ const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
 const images = document.querySelectorAll(
-  '.grid-3.featured .card img, .membros-grid .membro-card img, .gallery-preview img, .album-cover'
+  '.grid-3.featured .card img, .membros-grid .membro-card img, .gallery-preview img, .album-cover, .container .photo-gallery img'
 );
 
 let currentIndex = 0;
@@ -120,7 +120,7 @@ if (backToTop) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
-    if (href === '#') return; // Ignora links vazios
+    if (href === '#') return; // Ignorar links vazios
     
     e.preventDefault();
     const target = document.querySelector(href);
