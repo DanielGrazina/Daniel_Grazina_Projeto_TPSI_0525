@@ -698,3 +698,307 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(255, 106, 0, 0.6);
 }
+
+/* =========================
+   PÁGINA CHESTER BENNINGTON
+========================= */
+.chester-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+                url('../img/chester/cheste_parallax.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.chester-hero-content h1 {
+    font-size: clamp(32px, 6vw, 64px);
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.chester-hero-content .dates {
+    font-size: clamp(18px, 3vw, 24px);
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.chester-hero-content .quote {
+    font-style: italic;
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: var(--accent-2);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.tribute-section {
+    background: var(--surface);
+    padding: 60px 24px;
+    margin: 40px auto;
+    border-radius: var(--radius);
+    max-width: var(--container);
+}
+
+.timeline-chester {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline-chester::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--accent);
+}
+
+@media(max-width: 768px) {
+    .timeline-chester::before {
+        left: 20px;
+    }
+}
+
+.timeline-item-chester {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+
+@media(min-width: 769px) {
+    .timeline-item-chester {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 40px;
+    }
+
+    .timeline-item-chester:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    .timeline-item-chester::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: var(--accent);
+        border-radius: 50%;
+        top: 0;
+        right: -10px;
+        border: 3px solid var(--bg);
+        z-index: 1;
+    }
+
+    .timeline-item-chester:nth-child(even)::before {
+        left: -10px;
+        right: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .timeline-item-chester::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: var(--accent);
+        border-radius: 50%;
+        left: 12px;
+        top: 0;
+        border: 3px solid var(--bg);
+    }
+}
+
+.timeline-item-chester h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.timeline-item-chester p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.legacy-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+@media(min-width: 768px) {
+    .legacy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.legacy-card {
+    background: linear-gradient(135deg, rgba(255, 106, 0, 0.1), rgba(0, 180, 216, 0.1));
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid rgba(255, 106, 0, 0.2);
+}
+
+.legacy-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(255, 106, 0, 0.3);
+}
+
+.legacy-card i {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.legacy-card h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.legacy-card p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.memorial-message {
+    background: linear-gradient(135deg, var(--surface), rgba(0, 0, 0, 0.5));
+    border-left: 4px solid var(--accent);
+    padding: 32px;
+    border-radius: var(--radius);
+    margin: 40px 0;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.support-resources {
+    background: rgba(0, 180, 216, 0.1);
+    border: 2px solid var(--accent-2);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin: 40px auto;
+    max-width: var(--container);
+}
+
+.support-resources h3 {
+    color: var(--accent-2);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.support-resources p {
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.support-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.support-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--surface);
+    border-radius: 8px;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.support-link:hover {
+    background: var(--accent-2);
+    transform: translateX(5px);
+}
+
+.support-link i {
+    font-size: 1.5rem;
+    color: var(--accent-2);
+}
+
+.support-link:hover i {
+    color: var(--white);
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 40px 0;
+}
+
+@media(min-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(255, 106, 0, 0.4);
+}
+
+.video-tribute {
+    margin: 60px auto;
+    max-width: var(--container);
+}
+
+.video-tribute h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.fan-messages {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin: 40px auto;
+    max-width: var(--container);
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--accent);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.message-box .author {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.message-box .text {
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.6;
+}
