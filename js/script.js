@@ -78,3 +78,54 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') showPrev();
   if (e.key === 'ArrowRight') showNext();
 });
+
+// ==============================
+// PÁGINA DE CONTACTO
+// ==============================
+
+// Formulário de contacto
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const successMsg = document.getElementById('successMessage');
+    if (successMsg) {
+      successMsg.style.display = 'block';
+      this.reset();
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+      }, 5000);
+    }
+  });
+}
+
+// Botão voltar ao topo
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Smooth scroll para âncoras
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return; // Ignora links vazios
+    
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});

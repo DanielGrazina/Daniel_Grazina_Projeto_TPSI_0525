@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkin Park - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../img/Icon/icon.ico">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="../index.html">LINKIN PARK</a>
+            <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+            <nav id="mainNav" class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="discografia.html">Discografia</a></li>
+                    <li><a href="membros.html">Membros</a></li>
+                    <li><a href="chester.html">Chester</a></li>
+                    <li><a href="videos.html">Vídeos</a></li>
+                    <li><a href="concertos.html">Concertos</a></li>
+                    <li><a href="curiosidades.html">Curiosidades</a></li>
+                    <li><a href="fans.html">Fãs</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>Contacto <span class="rotating-icon">🎸</span></h1>
+            <p class="lead">Tens questões, sugestões ou queres partilhar a tua história com os Linkin Park? Entra em contacto connosco!</p>
+
+            <!-- Navegação por âncoras -->
+            <nav class="contacto-nav">
+                <a href="#formulario">📝 Formulário</a>
+                <a href="#informacoes">📞 Informações</a>
+                <a href="#localizacao">📍 Localização</a>
+                <a href="#redes-sociais">🌐 Redes Sociais</a>
+            </nav>
+        </section>
+
+        <!-- Seção do Formulário -->
+        <section id="formulario" class="container contacto-section">
+            <h2>Envia-nos uma Mensagem</h2>
+            <div class="contacto-grid">
+                <div class="form-card">
+                    <div id="successMessage" class="success-message">
+                        ✓ Mensagem enviada com sucesso! Responderemos em breve.
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="O teu nome">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="email@exemplo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Seleciona um assunto</option>
+                                <option value="geral">Questão Geral</option>
+                                <option value="sugestao">Sugestão para o Site</option>
+                                <option value="concerto">Informações sobre Concertos</option>
+                                <option value="colaboracao">Colaboração / Parceria</option>
+                                <option value="fotos">Partilhar Fotos de Concertos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" required placeholder="Escreve aqui a tua mensagem..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="info-card">
+                        <h3>Porquê Contactar-nos?</h3>
+                        <ul style="color: var(--muted); line-height: 1.8;">
+                            <li>✓ Partilha as tuas fotos de concertos</li>
+                            <li>✓ Sugere melhorias para o site</li>
+                            <li>✓ Envia a tua história como fã</li>
+                            <li>✓ Tira dúvidas sobre a banda</li>
+                            <li>✓ Propõe colaborações</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Informações -->
+        <section id="informacoes" class="container contacto-section">
+            <h2>Informações de Contacto</h2>
+            <div class="contacto-grid">
+                <div class="info-card">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p style="color: var(--muted);">fansite@linkinpark-pt.com</p>
+                            <p style="color: var(--muted); font-size: 0.9rem;">Respondemos em 24-48h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p style="color: var(--muted);">+351 210 123 456</p>
+                            <p style="color: var(--muted); font-size: 0.9rem;">Seg-Sex: 10h-18h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Morada (Escritório do Projeto)</h3>
+                            <p style="color: var(--muted);">Rua da Música, nº 123<br>1000-001 Lisboa, Portugal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horário de Atendimento</h3>
+                            <p style="color: var(--muted);">
+                                <strong>Segunda a Sexta:</strong> 10h - 18h<br>
+                                <strong>Sábado:</strong> 10h - 14h<br>
+                                <strong>Domingo:</strong> Encerrado
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h3>Nota Importante</h3>
+                            <p style="color: var(--muted); font-size: 0.9rem;">
+                                Este é um site de fãs não oficial. Para questões oficiais, consulta o site oficial dos Linkin Park.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Localização com Google Maps -->
+        <section id="localizacao" class="container contacto-section">
+            <h2>📍 Nossa Localização</h2>
+            <p class="lead">Visita-nos ou descobre onde nos encontramos em Lisboa!</p>
+            
+            <div class="map-container">
+                <!-- Google Maps Iframe - Praça do Comércio, Lisboa -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.4279193423986!2d-9.138818084615665!3d38.70766297959647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19347f3984b3bd%3A0x32dc08c1e51c1c5e!2sPra%C3%A7a%20do%20Com%C3%A9rcio!5e0!3m2!1spt-PT!2spt!4v1234567890123!5m2!1spt-PT!2spt"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização do escritório em Lisboa">
+                </iframe>
+            </div>
+
+            <p style="text-align: center; margin-top: 20px; color: var(--muted);">
+                <i class="fas fa-subway"></i> <strong>Metro:</strong> Terreiro do Paço (Linha Azul) | 
+                <i class="fas fa-bus"></i> <strong>Autocarros:</strong> 706, 728, 735, 759
+            </p>
+        </section>
+
+        <!-- Seção de Redes Sociais -->
+        <section id="redes-sociais" class="container contacto-section">
+            <h2>🌐 Segue-nos nas Redes Sociais</h2>
+            <p class="lead">Fica a par de todas as novidades sobre os Linkin Park!</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/linkinpark/" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook Oficial</span>
+                </a>
+                <a href="https://www.instagram.com/linkinpark/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram Oficial</span>
+                </a>
+                <a href="https://www.youtube.com/channel/UCZU9T1ceaOgwfLRq7OKFU4Q" target="_blank" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube Oficial</span>
+                </a>
+                <a href="https://twitter.com/linkinpark" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter/X Oficial</span>
+                </a>
+                <a href="https://www.linkinpark.com" target="_blank" class="social-link">
+                    <i class="fas fa-globe"></i>
+                    <span>Site Oficial</span>
+                </a>
+                <a href="https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz" target="_blank" class="social-link">
+                    <i class="fab fa-spotify"></i>
+                    <span>Spotify</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Rápido -->
+        <section class="container contacto-section">
+            <h2>Perguntas Frequentes</h2>
+            <div class="contacto-grid">
+                <div class="info-card">
+                    <h3>Quando vão lançar novo álbum?</h3>
+                    <p style="color: var(--muted);">O álbum "From Zero" foi lançado em novembro de 2024. Para novidades sobre futuros lançamentos, segue as redes sociais oficiais.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Como posso partilhar fotos?</h3>
+                    <p style="color: var(--muted);">Envia-nos as tuas fotos através do formulário acima, selecionando "Partilhar Fotos de Concertos" como assunto.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Este site é oficial?</h3>
+                    <p style="color: var(--muted);">Não, somos um site de fãs criado como projeto escolar. Para informações oficiais, visita linkinpark.com</p>
+                </div>
+                <div class="info-card">
+                    <h3>Posso sugerir conteúdo?</h3>
+                    <p style="color: var(--muted);">Claro! Adoramos receber sugestões. Usa o formulário e seleciona "Sugestão para o Site".</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="socials">
+                <a href="https://www.facebook.com/linkinpark/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/linkinpark/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCZU9T1ceaOgwfLRq7OKFU4Q" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 – Projeto Escolar • Site não oficial de fãs.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span id="prev" class="lightbox-nav">&#10094;</span>
+        <img class="lightbox-img" src="" alt="">
+        <span id="next" class="lightbox-nav">&#10095;</span>
+    </div>
+
+    <!-- Botão voltar ao topo (âncora) -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
