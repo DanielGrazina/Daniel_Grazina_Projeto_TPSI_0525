@@ -1835,3 +1835,322 @@ body {
     line-height: 1.6;
     font-size: 0.95rem;
 }
+
+/* =========================
+   PÁGINA DE CURIOSIDADES
+========================= */
+
+/* Feature de curiosidade */
+.curiosity-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+@media(min-width: 768px) {
+    .curiosity-feature {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.curiosity-content h3 {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.curiosity-content > p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+}
+
+.fact-box {
+    background: var(--surface);
+    border-left: 4px solid var(--accent);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.3s;
+}
+
+.fact-box:hover {
+    transform: translateX(8px);
+    border-left-color: var(--accent-2);
+    box-shadow: 0 6px 20px rgba(255, 106, 0, 0.3);
+}
+
+.fact-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.fact-box h4 {
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.fact-box p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.curiosity-image img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Grid de recordes */
+.records-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+@media(min-width: 768px) {
+    .records-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px) {
+    .records-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.record-card {
+    background: linear-gradient(145deg, var(--surface), rgba(21, 23, 27, 0.9));
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.record-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.record-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(255, 106, 0, 0.4);
+    border-color: var(--accent);
+}
+
+.record-card:hover::before {
+    transform: scaleX(1);
+}
+
+.record-number {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.record-card h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.record-card p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Lista de factos */
+.facts-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fact-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.fact-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(255, 106, 0, 0.3);
+    border-color: var(--accent);
+}
+
+.fact-number {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.4);
+}
+
+.fact-content h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.fact-content p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* Grid de colaborações */
+.collab-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media(min-width: 768px) {
+    .collab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px) {
+    .collab-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.collab-card {
+    background: linear-gradient(145deg, var(--surface), rgba(21, 23, 27, 0.9));
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.collab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 180, 216, 0.3);
+    border-color: var(--accent-2);
+}
+
+.collab-artist {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.artist-initial {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.4);
+}
+
+.collab-artist h3 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.collab-card h4 {
+    color: var(--accent-2);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.collab-card p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Trivia boxes */
+.trivia-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media(min-width: 768px) {
+    .trivia-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px) {
+    .trivia-boxes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.trivia-box {
+    background: linear-gradient(145deg, rgba(255, 106, 0, 0.1), var(--surface));
+    border: 2px solid rgba(255, 106, 0, 0.2);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.trivia-box:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 12px 32px rgba(255, 106, 0, 0.4);
+    border-color: var(--accent);
+}
+
+.trivia-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.trivia-box p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
