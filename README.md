@@ -5,7 +5,8 @@ com o objetivo de aplicar conhecimentos de **HTML5**, **CSS3** e
 **JavaScript**.\
 O tema escolhido foi a banda **Linkin Park**, explorando a sua história,
 discografia, membros e impacto cultural.
-👉[Ver Online](https://68dff3ba8405d412926c9168--eclectic-kleicha-e202b4.netlify.app/)
+
+👉[Ver Online](https://projetodanielgrazina.netlify.app/)
 
 ------------------------------------------------------------------------
 
