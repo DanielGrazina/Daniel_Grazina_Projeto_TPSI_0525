@@ -20,10 +20,9 @@
                 <span class="sr-only">Abrir menu</span>
             </button>
 
-            <!-- NAV -->
             <nav id="mainNav" class="main-nav" role="navigation">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
                     <li><a href="paginas/historia.html">História</a></li>
                     <li><a href="paginas/discografia.html">Discografia</a></li>
                     <li><a href="paginas/membros.html">Membros</a></li>
@@ -43,81 +42,114 @@
         <section class="hero">
             <div class="hero-overlay">
                 <div class="container hero-content">
-                    <h1>Linkin Park — Fan Site</h1>
+                    <h1>LINKIN PARK</h1>
                     <p class="tagline">História, discografia, vídeos e momentos inesquecíveis.</p>
                     <div class="hero-ctas">
-                        <a class="btn primary" href="paginas/discografia.html">Explorar Discografia</a>
-                        <a class="btn outline" href="paginas/videos.html">Ver Vídeos</a>
+                        <a class="btn primary" href="paginas/discografia.html">
+                            <i class="fas fa-compact-disc"></i> Explorar Discografia
+                        </a>
+                        <a class="btn outline" href="paginas/videos.html">
+                            <i class="fas fa-play-circle"></i> Ver Vídeos
+                        </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="stats-banner">
+            <div class="stat-box">
+                <span class="stat-number">100M+</span>
+                <span class="stat-label">Álbuns Vendidos</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Anos de História</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Álbuns Estúdio</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Grammy Awards</span>
             </div>
         </section>
 
         <!-- Quem são -->
         <section class="container intro">
             <h2>Quem são os Linkin Park?</h2>
-            <p class="lead">Linkin Park é uma banda norte-americana formada em 1996, conhecida por misturar rock,
-                nu-metal e eletrónica. Explora a discografia, os membros e os concertos que marcaram os fãs.</p>
+            <p class="lead">Linkin Park é uma banda norte-americana formada em 1996, conhecida por revolucionar o rock moderno ao misturar nu-metal, rock alternativo e elementos eletrónicos. Com mais de 100 milhões de álbuns vendidos mundialmente, tornaram-se uma das bandas mais influentes do século XXI. Explora a discografia, conhece os membros e revive os concertos que marcaram gerações de fãs.</p>
         </section>
 
-        <section class="container grid-3 featured">
-            <!-- Album destaque -->
-            <article class="card">
-                <img src="img/Albuns/From_Zero.jpg" alt="Capa de álbum" loading="lazy">
-                <h3>Álbum em destaque</h3>
-                <p>Breve descrição do álbum em destaque. Lançamento, singles e curiosidades.</p>
-                <a class="small-link" href="paginas/discografia.html">Ver discografia →</a>
-            </article>
+        <!-- Cards destaque -->
+        <section class="featured-section">
+            <div class="container grid-3 featured">
+                <article class="card">
+                    <img src="img/Albuns/From_Zero.jpg" alt="Álbum From Zero" loading="lazy">
+                    <h3>From Zero (2024)</h3>
+                    <p>Nova era da banda com Emily Armstrong nos vocais. Um recomeço poderoso que honra o passado enquanto abraça o futuro.</p>
+                    <a class="small-link" href="paginas/discografia.html">
+                        Ver discografia <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
 
-            <!-- Video destaque -->
-            <article class="card">
-                <h3>Vídeo em destaque</h3>
-                <div class="video-wrap">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/aujayq52PW0?si=oSkF4Q3QarCVtP8T"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <article class="card">
+                    <h3>Vídeo em Destaque</h3>
+                    <div class="video-wrap">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/aujayq52PW0"
+                            title="The Emptiness Machine" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p style="margin-top: 12px;">The Emptiness Machine - primeiro single da nova formação</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/Concertos/upcoming.jpg" alt="Próximos concertos" loading="lazy" 
+                         onerror="this.src='img/Albuns/From_Zero.jpg'">
+                    <h3>Próximos Concertos 2025</h3>
+                    <p>From Zero World Tour está a chegar! Descobre as datas e prepara-te para experiências inesquecíveis.</p>
+                    <a class="small-link" href="paginas/concertos.html">
+                        Ver concertos <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="gallery-preview">
+            <div class="container">
+                <h2>Galeria Visual</h2>
+                <div class="grid-4 thumbs">
+                    <a href="paginas/videos.html"><img src="img/Videos/thumb1.jpg" alt="Performance ao vivo" loading="lazy"></a>
+                    <a href="paginas/videos.html"><img src="img/Videos/thumb2.jpg" alt="Concerto energia" loading="lazy"></a>
+                    <a href="paginas/videos.html"><img src="img/Videos/thumb3.jpg" alt="Momento épico" loading="lazy"></a>
+                    <a href="paginas/videos.html"><img src="img/Videos/thumb4.jpg" alt="Palco iluminado" loading="lazy"></a>
                 </div>
-            </article>
-
-            <!-- Proximos concertos -->
-            <article class="card">
-                <h3>Próximos concertos</h3>
-                <p>Resumo dos eventos mais importantes — consulta a página de Concertos para mais detalhes.</p>
-                <a class="small-link" href="paginas/concertos.html">Ver concertos →</a>
-            </article>
-        </section>
-
-        <!-- Preview  da galeria -->
-        <section class="container gallery-preview">
-            <h2>Galeria</h2>
-            <div class="grid-4 thumbs">
-                <a href="paginas/videos.html"><img src="img/Videos/thumb1.jpg" alt="" loading="lazy"></a>
-                <a href="paginas/videos.html"><img src="img/Videos/thumb2.jpg" alt="" loading="lazy"></a>
-                <a href="paginas/videos.html"><img src="img/Videos/thumb3.jpg" alt="" loading="lazy"></a>
-                <a href="paginas/videos.html"><img src="img/Videos/thumb4.jpg" alt="" loading="lazy"></a>
             </div>
         </section>
 
         <!-- CTA -->
-        <section class="container cta">
-            <h2>Queres contribuir?</h2>
-            <p>Envie-nos uma mensagem ou partilha as tuas fotos de concertos.</p>
-            <a class="btn primary" href="paginas/contacto.html">Contacto</a>
+        <section class="cta">
+            <div class="container">
+                <h2>Faz Parte da Comunidade</h2>
+                <p>Junta-te a milhões de fãs ao redor do mundo. Partilha as tuas fotos de concertos, histórias e conecta-te com outros soldados.</p>
+                <a class="btn primary" href="paginas/contacto.html">
+                    <i class="fas fa-paper-plane"></i> Contacta-nos
+                </a>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="socials">
-                <a href="https://www.facebook.com/linkinpark/" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/linkinpark/" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCZU9T1ceaOgwfLRq7OKFU4Q" aria-label="YouTube"><i
-                        class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/linkinpark/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/linkinpark/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCZU9T1ceaOgwfLRq7OKFU4Q" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
-            <p>&copy; 2025 — Projeto Escolar • Site não oficial de fãs.</p>
+            <p>&copy; 2025 – Projeto Escolar • Site não oficial de fãs.</p>
         </div>
     </footer>
 
@@ -134,7 +166,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
