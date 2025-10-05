@@ -13,6 +13,52 @@ if (navToggle && mainNav) {
 }
 
 // ==============================
+// ANIMATE ON SCROLL
+// ==============================
+function initAnimateOnScroll() {
+  // Configurar observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('aos-animate');
+        // Parar de observar após animação (performance)
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Selecionar elementos para animar
+  const animateElements = document.querySelectorAll(
+    '.card, .stat-box, .membro-card, .membro-card-historia, ' +
+    '.concert-card, .video-card, .record-card, .legacy-card, ' +
+    '.collab-card, .trivia-box, .fact-box, .fact-item, ' +
+    '.story-card, .community-card, .achievement-card, ' +
+    '.timeline-item-chester, .timeline-item-historia, .tour-item, ' +
+    '.portugal-card, .festival-card, .intro, .cta, .cta-box, ' +
+    '.photo-gallery img, .fan-photo, .fanart-item, ' +
+    '.curiosity-feature, .section-divider, .tribute-banner'
+  );
+
+  // Observar cada elemento, efeito cascata
+  animateElements.forEach((el, index) => {
+    el.style.transitionDelay = `${(index % 6) * 0.1}s`;
+    observer.observe(el);
+  });
+}
+
+// Inicializar quando o DOM estiver pronto
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAnimateOnScroll);
+} else {
+  initAnimateOnScroll();
+}
+
+// ==============================
 // LIGHTBOX
 // ==============================
 const lightbox = document.getElementById('lightbox');

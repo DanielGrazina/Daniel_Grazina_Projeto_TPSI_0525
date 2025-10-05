@@ -25,6 +25,59 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* ===== ANIMATE ON SCROLL ===== */
+.card, .stat-box, .membro-card, .membro-card-historia,
+.concert-card, .video-card, .record-card, .legacy-card,
+.collab-card, .trivia-box, .fact-box, .fact-item,
+.story-card, .community-card, .achievement-card,
+.timeline-item-chester, .timeline-item-historia, .tour-item,
+.portugal-card, .festival-card, .intro, .cta, .cta-box,
+.photo-gallery img, .fan-photo, .fanart-item,
+.curiosity-feature, .section-divider, .tribute-banner {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.aos-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Variações de animação para diferentes elementos */
+.timeline-item-chester, .timeline-item-historia, .tour-item {
+    transform: translateX(-30px);
+}
+
+.timeline-item-chester:nth-child(even),
+.timeline-item-historia:nth-child(even),
+.tour-item:nth-child(even) {
+    transform: translateX(30px);
+}
+
+.timeline-item-chester.aos-animate,
+.timeline-item-historia.aos-animate,
+.tour-item.aos-animate {
+    transform: translateX(0) !important;
+}
+
+.photo-gallery img, .fan-photo, .fanart-item {
+    transform: scale(0.9);
+}
+
+.photo-gallery img.aos-animate,
+.fan-photo.aos-animate,
+.fanart-item.aos-animate {
+    transform: scale(1) !important;
+}
+
+/* Hero sections não animam */
+.hero, .chester-hero, .videos-hero, .historia-hero,
+.hero-content, .hero-overlay {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 /* ===== UTILITÁRIOS ===== */
 .container {
     max-width: var(--container);
