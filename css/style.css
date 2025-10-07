@@ -717,10 +717,10 @@ body {
 /* ===== GALERIA & VÍDEOS ===== */
 .gallery-preview,
 .tribute-section {
-    padding: 60px 24px;
     background: var(--surface);
-    margin: 60px 0;
     border-radius: var(--radius);
+    margin: 0 auto;
+    padding: 24px;
 }
 
 .gallery-preview .thumbs a,
@@ -980,40 +980,6 @@ body {
     background: linear-gradient(180deg, var(--accent), var(--accent-2));
 }
 
-@media (max-width: 768px) {
-    .timeline-item-chester::before {
-        content: '';
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background: var(--accent);
-        border-radius: 50%;
-        left: 12px;
-        top: 0;
-        border: 3px solid var(--bg);
-    }
-
-    .tour-item,
-    .timeline-item-historia {
-        padding-left: 20px;
-        flex-direction: column;
-    }
-
-    .tour-year,
-    .timeline-year {
-        position: relative;
-        left: auto;
-        top: auto;
-        min-width: auto;
-        margin-bottom: 16px;
-    }
-
-    .tour-year::after,
-    .timeline-year::after {
-        display: none;
-    }
-}
-
 .timeline-item-chester,
 .tour-item,
 .timeline-item-historia {
@@ -1093,6 +1059,9 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .timeline-chester::before{left: 6%;}
+
     .timeline-item-chester {
         padding-left: 60px;
     }
@@ -2606,13 +2575,11 @@ body {
     z-index: 0;
 }
 
-/* Remove segunda bolinha (duplicada) */
 .timeline-year::after,
 .tour-year::after {
     display: none !important;
 }
 
-/* Itens base */
 .timeline-item-historia,
 .tour-item {
     position: relative;
@@ -2621,14 +2588,12 @@ body {
     box-sizing: border-box;
 }
 
-/* Alinhamento à esquerda e à direita */
 .timeline-item-historia:nth-child(odd),
 .tour-item:nth-child(odd) {
     left: 0;
     text-align: right;
 }
 
-/* Corrigir o ponto central (apenas 1 bolinha real) */
 .timeline-item-historia::before,
 .tour-item::before {
     content: "";
