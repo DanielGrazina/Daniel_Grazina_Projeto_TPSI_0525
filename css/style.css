@@ -11,13 +11,16 @@
     --transition: all 0.3s ease;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     background: var(--bg);
@@ -26,14 +29,35 @@ html, body {
 }
 
 /* ===== ANIMATE ON SCROLL ===== */
-.card, .stat-box, .membro-card, .membro-card-historia,
-.concert-card, .video-card, .record-card, .legacy-card,
-.collab-card, .trivia-box, .fact-box, .fact-item,
-.story-card, .community-card, .achievement-card,
-.timeline-item-chester, .timeline-item-historia, .tour-item,
-.portugal-card, .festival-card, .intro, .cta, .cta-box,
-.photo-gallery img, .fan-photo, .fanart-item,
-.curiosity-feature, .section-divider, .tribute-banner {
+.card,
+.stat-box,
+.membro-card,
+.membro-card-historia,
+.concert-card,
+.video-card,
+.record-card,
+.legacy-card,
+.collab-card,
+.trivia-box,
+.fact-box,
+.fact-item,
+.story-card,
+.community-card,
+.achievement-card,
+.timeline-item-chester,
+.timeline-item-historia,
+.tour-item,
+.portugal-card,
+.festival-card,
+.intro,
+.cta,
+.cta-box,
+.photo-gallery img,
+.fan-photo,
+.fanart-item,
+.curiosity-feature,
+.section-divider,
+.tribute-banner {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -45,7 +69,9 @@ html, body {
 }
 
 /* Variações de animação para diferentes elementos */
-.timeline-item-chester, .timeline-item-historia, .tour-item {
+.timeline-item-chester,
+.timeline-item-historia,
+.tour-item {
     transform: translateX(-30px);
 }
 
@@ -61,7 +87,9 @@ html, body {
     transform: translateX(0) !important;
 }
 
-.photo-gallery img, .fan-photo, .fanart-item {
+.photo-gallery img,
+.fan-photo,
+.fanart-item {
     transform: scale(0.9);
 }
 
@@ -72,8 +100,12 @@ html, body {
 }
 
 /* Hero sections não animam */
-.hero, .chester-hero, .videos-hero, .historia-hero,
-.hero-content, .hero-overlay {
+.hero,
+.chester-hero,
+.videos-hero,
+.historia-hero,
+.hero-content,
+.hero-overlay {
     opacity: 1 !important;
     transform: none !important;
 }
@@ -131,7 +163,9 @@ html, body {
     padding: 0;
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
+.hamburger,
+.hamburger::before,
+.hamburger::after {
     content: '';
     display: block;
     width: 100%;
@@ -142,11 +176,25 @@ html, body {
     position: relative;
 }
 
-.hamburger::before { transform: translateY(-7px); }
-.hamburger::after { transform: translateY(4px); }
-.nav-toggle.open .hamburger { background: transparent; }
-.nav-toggle.open .hamburger::before { transform: rotate(45deg) translate(5px, 5px); }
-.nav-toggle.open .hamburger::after { transform: rotate(-45deg) translate(5px, -5px); }
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(4px);
+}
+
+.nav-toggle.open .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.open .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.open .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
 
 /* Navegação Mobile */
 .main-nav {
@@ -166,7 +214,9 @@ html, body {
     padding-top: 100px;
 }
 
-.main-nav.open { transform: translateY(0); }
+.main-nav.open {
+    transform: translateY(0);
+}
 
 .main-nav ul {
     list-style: none;
@@ -184,12 +234,17 @@ html, body {
     transition: color 0.2s;
 }
 
-.main-nav a:hover, .main-nav a.active { color: var(--accent); }
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent);
+}
 
 /* Desktop Nav */
 @media (min-width: 769px) {
-    .nav-toggle { display: none; }
-    
+    .nav-toggle {
+        display: none;
+    }
+
     .main-nav {
         position: static;
         transform: translateY(0) !important;
@@ -198,13 +253,22 @@ html, body {
         padding: 0;
         flex-direction: row;
     }
-    
-    .main-nav ul { flex-direction: row; }
-    .main-nav a { font-size: 1rem; color: var(--white); }
+
+    .main-nav ul {
+        flex-direction: row;
+    }
+
+    .main-nav a {
+        font-size: 1rem;
+        color: var(--white);
+    }
 }
 
 /* ===== HERO SECTIONS ===== */
-.hero, .chester-hero, .videos-hero, .historia-hero {
+.hero,
+.chester-hero,
+.videos-hero,
+.historia-hero {
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -221,15 +285,22 @@ html, body {
     content: '';
     position: absolute;
     inset: 0;
-    background: 
+    background:
         radial-gradient(circle at 30% 50%, rgba(255, 106, 0, 0.3), transparent 70%),
         radial-gradient(circle at 70% 70%, rgba(0, 180, 216, 0.3), transparent 70%);
     animation: pulseGlow 8s ease-in-out infinite;
 }
 
 @keyframes pulseGlow {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .hero-overlay {
@@ -244,7 +315,10 @@ html, body {
     text-align: center;
 }
 
-.hero h1, .videos-hero h1, .chester-hero-content h1, .historia-hero-content h1 {
+.hero h1,
+.videos-hero h1,
+.chester-hero-content h1,
+.historia-hero-content h1 {
     font-size: clamp(32px, 7vw, 68px);
     margin-bottom: 16px;
     font-weight: 900;
@@ -259,7 +333,9 @@ html, body {
     background-clip: text;
 }
 
-.hero .tagline, .videos-hero .tagline, .chester-hero-content .dates {
+.hero .tagline,
+.videos-hero .tagline,
+.chester-hero-content .dates {
     font-size: clamp(16px, 2.5vw, 22px);
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 32px;
@@ -275,7 +351,7 @@ html, body {
 
 /* Chester Hero */
 .chester-hero {
-    background: 
+    background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
         url('../img/chester/cheste_parallax.jpg') center/cover no-repeat;
     min-height: 70vh;
@@ -294,7 +370,7 @@ html, body {
 
 /* Videos Hero */
 .videos-hero {
-    background: 
+    background:
         linear-gradient(135deg, rgba(255, 106, 0, 0.7), rgba(0, 180, 216, 0.7)),
         url('../img/Videos/from_zero.jpg') left 10px top 10px/20% auto no-repeat,
         url('../img/Videos/group.jpg') right 10px top 10px/22% auto no-repeat,
@@ -313,15 +389,22 @@ html, body {
     content: '';
     position: absolute;
     inset: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(255, 106, 0, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(0, 180, 216, 0.3) 0%, transparent 50%);
     animation: pulse 8s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 .videos-hero::after {
@@ -339,7 +422,7 @@ html, body {
 
 /* Historia Hero */
 .historia-hero {
-    background: 
+    background:
         linear-gradient(135deg, rgba(255, 106, 0, 0.8), rgba(0, 180, 216, 0.8)),
         url('../img/Outros/historia_hero.jpg') center/cover no-repeat;
     min-height: 50vh;
@@ -349,7 +432,9 @@ html, body {
 }
 
 /* ===== BOTÕES ===== */
-.btn, .btn-ticket, .btn-info {
+.btn,
+.btn-ticket,
+.btn-info {
     display: inline-block;
     padding: 10px 18px;
     border-radius: 8px;
@@ -359,9 +444,13 @@ html, body {
     cursor: pointer;
 }
 
-.btn:hover, .btn-ticket:hover { transform: scale(1.05); }
+.btn:hover,
+.btn-ticket:hover {
+    transform: scale(1.05);
+}
 
-.btn.primary, .btn-ticket {
+.btn.primary,
+.btn-ticket {
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     color: var(--white);
 }
@@ -370,7 +459,8 @@ html, body {
     box-shadow: 0 4px 12px rgba(255, 106, 0, 0.4);
 }
 
-.btn.outline, .btn-info {
+.btn.outline,
+.btn-info {
     border: 2px solid rgba(255, 255, 255, 0.08);
     color: var(--white);
     background: transparent;
@@ -387,7 +477,9 @@ html, body {
     border-color: var(--accent-2);
 }
 
-.btn i { margin-right: 8px; }
+.btn i {
+    margin-right: 8px;
+}
 
 .small-link {
     color: var(--accent);
@@ -396,26 +488,51 @@ html, body {
     transition: color 0.3s;
 }
 
-.small-link:hover { color: var(--accent-2); }
+.small-link:hover {
+    color: var(--accent-2);
+}
 
 /* ===== GRIDS ===== */
-.grid-3.featured, .grid-4 {
+.grid-3.featured,
+.grid-4 {
     display: grid;
     gap: 24px;
 }
 
-.grid-3.featured { grid-template-columns: 1fr; }
-.grid-4 { grid-template-columns: repeat(2, 1fr); }
+.grid-3.featured {
+    grid-template-columns: 1fr;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
 
 @media (min-width: 768px) {
-    .grid-3.featured { grid-template-columns: repeat(3, 1fr); }
-    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3.featured {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* ===== CARDS BÁSICOS ===== */
-.card, .membro-card, .concert-card, .video-card, .record-card, .legacy-card, 
-.collab-card, .story-card, .stat-card, .portugal-card, .festival-card, 
-.achievement-card, .community-card, .trivia-box, .tour-content {
+.card,
+.membro-card,
+.concert-card,
+.video-card,
+.record-card,
+.legacy-card,
+.collab-card,
+.story-card,
+.stat-card,
+.portugal-card,
+.festival-card,
+.achievement-card,
+.community-card,
+.trivia-box,
+.tour-content {
     background: linear-gradient(145deg, var(--surface), rgba(21, 23, 27, 0.95));
     border-radius: var(--radius);
     padding: 16px;
@@ -436,14 +553,16 @@ html, body {
     margin-bottom: 12px;
 }
 
-.card h3, .membro-card h3 {
+.card h3,
+.membro-card h3 {
     color: var(--accent);
     font-size: 1.5rem;
     margin-bottom: 12px;
     font-weight: 700;
 }
 
-.card p, .membro-card p {
+.card p,
+.membro-card p {
     color: var(--muted);
     line-height: 1.6;
     margin-bottom: 16px;
@@ -471,12 +590,24 @@ html, body {
     transition: left 0.5s;
 }
 
-.featured-section .card:hover::before { left: 100%; }
+.featured-section .card:hover::before {
+    left: 100%;
+}
 
-.featured-section .card:hover, .membro-card:hover, .concert-card:hover, 
-.video-card:hover, .record-card:hover, .legacy-card:hover, .collab-card:hover,
-.story-card:hover, .stat-card:hover, .portugal-card:hover, .festival-card:hover,
-.achievement-card:hover, .community-card:hover, .tour-content:hover {
+.featured-section .card:hover,
+.membro-card:hover,
+.concert-card:hover,
+.video-card:hover,
+.record-card:hover,
+.legacy-card:hover,
+.collab-card:hover,
+.story-card:hover,
+.stat-card:hover,
+.portugal-card:hover,
+.festival-card:hover,
+.achievement-card:hover,
+.community-card:hover,
+.tour-content:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 40px rgba(255, 106, 0, 0.4);
     border-color: var(--accent);
@@ -489,7 +620,9 @@ html, body {
     transition: var(--transition);
 }
 
-.card .small-link:hover { gap: 12px; }
+.card .small-link:hover {
+    gap: 12px;
+}
 
 /* ===== SECÇÕES DE CONTEÚDO ===== */
 .intro {
@@ -508,7 +641,11 @@ html, body {
     opacity: 0.1;
 }
 
-.intro h2, .gallery-preview h2, .cta h2, .section-divider h2, .cta-box h2 {
+.intro h2,
+.gallery-preview h2,
+.cta h2,
+.section-divider h2,
+.cta-box h2 {
     font-size: clamp(28px, 5vw, 42px);
     color: var(--accent);
     margin-bottom: 20px;
@@ -525,7 +662,8 @@ html, body {
 }
 
 /* Stats Banner */
-.stats-banner, .community-stats {
+.stats-banner,
+.community-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -534,7 +672,11 @@ html, body {
 }
 
 @media (min-width: 768px) {
-    .stats-banner, .community-stats { grid-template-columns: repeat(4, 1fr); }
+
+    .stats-banner,
+    .community-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .stat-box {
@@ -546,13 +688,15 @@ html, body {
     transition: var(--transition);
 }
 
-.stat-box:hover, .info-card:hover {
+.stat-box:hover,
+.info-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
     box-shadow: 0 8px 24px rgba(255, 106, 0, 0.3);
 }
 
-.stat-number, .stat-value {
+.stat-number,
+.stat-value {
     font-size: 2.5rem;
     font-weight: 900;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
@@ -571,14 +715,17 @@ html, body {
 }
 
 /* ===== GALERIA & VÍDEOS ===== */
-.gallery-preview, .tribute-section {
+.gallery-preview,
+.tribute-section {
     padding: 60px 24px;
     background: var(--surface);
     margin: 60px 0;
     border-radius: var(--radius);
 }
 
-.gallery-preview .thumbs a, .fan-photo, .fanart-item {
+.gallery-preview .thumbs a,
+.fan-photo,
+.fanart-item {
     display: block;
     position: relative;
     border-radius: var(--radius);
@@ -586,16 +733,24 @@ html, body {
     aspect-ratio: 16/9;
 }
 
-.fan-photo, .fanart-item { aspect-ratio: 1; cursor: pointer; }
+.fan-photo,
+.fanart-item {
+    aspect-ratio: 1;
+    cursor: pointer;
+}
 
-.gallery-preview .thumbs img, .fan-photo img, .fanart-item img {
+.gallery-preview .thumbs img,
+.fan-photo img,
+.fanart-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.4s;
 }
 
-.gallery-preview .thumbs a:hover img, .fan-photo:hover img, .fanart-item:hover img {
+.gallery-preview .thumbs a:hover img,
+.fan-photo:hover img,
+.fanart-item:hover img {
     transform: scale(1.15);
     filter: brightness(1.2);
 }
@@ -650,11 +805,15 @@ html, body {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* ===== CTA SECTIONS ===== */
-.cta, .cta-box, .tribute-banner {
+.cta,
+.cta-box,
+.tribute-banner {
     text-align: center;
     padding: 80px 40px;
     background: linear-gradient(135deg, rgba(255, 106, 0, 0.15), rgba(0, 180, 216, 0.15));
@@ -665,7 +824,8 @@ html, body {
     overflow: hidden;
 }
 
-.cta::before, .cta-box::before {
+.cta::before,
+.cta-box::before {
     content: '♪';
     position: absolute;
     top: -20px;
@@ -675,9 +835,15 @@ html, body {
     transform: rotate(20deg);
 }
 
-.cta-box::before { content: '🎬'; top: -30px; right: -30px; font-size: 150px; }
+.cta-box::before {
+    content: '🎬';
+    top: -30px;
+    right: -30px;
+    font-size: 150px;
+}
 
-.cta p, .cta-box p {
+.cta p,
+.cta-box p {
     font-size: clamp(16px, 2vw, 20px);
     color: var(--muted);
     margin-bottom: 32px;
@@ -704,7 +870,8 @@ html, body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 
-.lightbox-close, .lightbox-nav {
+.lightbox-close,
+.lightbox-nav {
     position: absolute;
     font-size: 3rem;
     color: var(--white);
@@ -712,8 +879,15 @@ html, body {
     transition: color 0.3s;
 }
 
-.lightbox-close { top: 20px; right: 30px; }
-.lightbox-close:hover, .lightbox-nav:hover { color: var(--accent); }
+.lightbox-close {
+    top: 20px;
+    right: 30px;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    color: var(--accent);
+}
 
 .lightbox-nav {
     top: 50%;
@@ -722,8 +896,13 @@ html, body {
     user-select: none;
 }
 
-#prev { left: 20px; }
-#next { right: 20px; }
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
 
 /* ===== FORMULÁRIOS ===== */
 .form-group {
@@ -737,7 +916,9 @@ html, body {
     font-weight: 600;
 }
 
-.form-group input, .form-group textarea, .form-group select {
+.form-group input,
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 12px;
     background: var(--surface);
@@ -748,13 +929,17 @@ html, body {
     transition: border-color 0.3s, transform 0.2s;
 }
 
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--accent);
     transform: scale(1.02);
 }
 
-.form-group input:hover, .form-group textarea:hover, .form-group select:hover {
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
     border-color: var(--accent-2);
 }
 
@@ -764,16 +949,22 @@ html, body {
 }
 
 /* ===== TIMELINES ===== */
-.timeline-chester, .timeline-tours, .timeline-historia {
+.timeline-chester,
+.timeline-tours,
+.timeline-historia {
     position: relative;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-.timeline-historia { max-width: 1000px; padding: 40px 0; }
+.timeline-historia {
+    padding: 40px 0;
+}
 
-.timeline-chester::before, .timeline-tours::before, .timeline-historia::before {
+.timeline-chester::before,
+.timeline-tours::before,
+.timeline-historia::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -783,24 +974,56 @@ html, body {
     background: var(--accent);
 }
 
-.timeline-tours::before, .timeline-historia::before {
+.timeline-tours::before,
+.timeline-historia::before {
     width: 3px;
     background: linear-gradient(180deg, var(--accent), var(--accent-2));
 }
 
 @media (max-width: 768px) {
-    .timeline-chester::before { left: 20px; }
-    .timeline-tours::before, .timeline-historia::before { left: 60px; }
-    .timeline-historia::before { left: 60px; }
+    .timeline-item-chester::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: var(--accent);
+        border-radius: 50%;
+        left: 12px;
+        top: 0;
+        border: 3px solid var(--bg);
+    }
+
+    .tour-item,
+    .timeline-item-historia {
+        padding-left: 20px;
+        flex-direction: column;
+    }
+
+    .tour-year,
+    .timeline-year {
+        position: relative;
+        left: auto;
+        top: auto;
+        min-width: auto;
+        margin-bottom: 16px;
+    }
+
+    .tour-year::after,
+    .timeline-year::after {
+        display: none;
+    }
 }
 
-.timeline-item-chester, .tour-item, .timeline-item-historia {
+.timeline-item-chester,
+.tour-item,
+.timeline-item-historia {
     position: relative;
     margin-bottom: 40px;
     padding-left: 60px;
 }
 
-.tour-item, .timeline-item-historia {
+.tour-item,
+.timeline-item-historia {
     display: flex;
     gap: 30px;
     margin-bottom: 50px;
@@ -808,19 +1031,26 @@ html, body {
 }
 
 @media (min-width: 769px) {
-    .timeline-item-chester, .tour-item, .timeline-item-historia {
+
+    .timeline-item-chester,
+    .tour-item,
+    .timeline-item-historia {
         width: 50%;
         padding-left: 0;
         padding-right: 40px;
     }
 
-    .timeline-item-chester:nth-child(even), .tour-item:nth-child(even), .timeline-item-historia:nth-child(even) {
+    .timeline-item-chester:nth-child(even),
+    .tour-item:nth-child(even),
+    .timeline-item-historia:nth-child(even) {
         margin-left: 50%;
         padding-left: 40px;
         padding-right: 0;
     }
 
-    .timeline-item-chester::before, .tour-year::after, .timeline-year::after {
+    .timeline-item-chester::before,
+    .tour-year::after,
+    .timeline-year::after {
         content: '';
         position: absolute;
         width: 20px;
@@ -863,6 +1093,10 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    .timeline-item-chester {
+        padding-left: 60px;
+    }
+    
     .timeline-item-chester::before {
         content: '';
         position: absolute;
@@ -876,51 +1110,43 @@ html, body {
     }
 
     .tour-item, .timeline-item-historia {
-        padding-left: 130px;
+        padding-left: 0;
+        flex-direction: column;
+        gap: 16px;
     }
 
-    .tour-item { padding-left: 130px; }
-
     .tour-year, .timeline-year {
-        position: absolute;
-        left: 0;
-        top: 0;
-        min-width: 110px;
+        position: relative;
+        left: auto;
+        top: auto;
+        min-width: auto;
+        margin-bottom: 0;
+        align-self: flex-start;
     }
 
     .tour-year::after, .timeline-year::after {
-        content: '';
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background: var(--accent);
-        border-radius: 50%;
-        right: -47px;
-        top: 20px;
-        border: 3px solid var(--bg);
-        z-index: 1;
+        display: none;
     }
-
-    .timeline-year::after {
-        width: 14px;
-        height: 14px;
-        right: -37px;
-        top: 50%;
-        transform: translateY(-50%);
+    
+    .timeline-item-historia::before {
+        display: none;
     }
 }
 
-.timeline-item-chester h3, .timeline-content-historia h3 {
+.timeline-item-chester h3,
+.timeline-content-historia h3 {
     color: var(--accent);
     margin-bottom: 8px;
 }
 
-.timeline-item-chester p, .timeline-content-historia p {
+.timeline-item-chester p,
+.timeline-content-historia p {
     color: var(--muted);
     line-height: 1.6;
 }
 
-.tour-year, .timeline-year {
+.tour-year,
+.timeline-year {
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     color: var(--white);
     padding: 12px 20px;
@@ -935,45 +1161,90 @@ html, body {
     flex-shrink: 0;
 }
 
-.timeline-year { font-size: 1rem; min-width: 80px; padding: 12px 16px; }
+.timeline-year {
+    font-size: 1rem;
+    min-width: 80px;
+    padding: 12px 16px;
+}
 
 /* ===== MEMBROS & CONCERTOS ===== */
-.membros-grid, .membros-grid-historia, .concerts-grid, .portugal-concerts, 
-.festivals-grid, .records-grid, .collab-grid, .trivia-boxes, .stories-grid, 
-.video-grid, .achievements-grid, .community-links {
+.membros-grid,
+.membros-grid-historia,
+.concerts-grid,
+.portugal-concerts,
+.festivals-grid,
+.records-grid,
+.collab-grid,
+.trivia-boxes,
+.stories-grid,
+.video-grid,
+.achievements-grid,
+.community-links {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
 }
 
-.membros-grid, .membros-grid-historia {
+.membros-grid,
+.membros-grid-historia {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
 }
 
 @media (min-width: 768px) {
-    .concerts-grid, .portugal-concerts, .festivals-grid, .stories-grid, .video-grid, 
-    .community-links, .contacto-grid { grid-template-columns: repeat(2, 1fr); }
-    .records-grid, .collab-grid, .trivia-boxes { grid-template-columns: repeat(2, 1fr); }
+
+    .concerts-grid,
+    .portugal-concerts,
+    .festivals-grid,
+    .stories-grid,
+    .video-grid,
+    .community-links,
+    .contacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .records-grid,
+    .collab-grid,
+    .trivia-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {
-    .concerts-grid, .portugal-concerts, .festivals-grid { grid-template-columns: repeat(3, 1fr); }
-    .records-grid, .collab-grid, .trivia-boxes, .achievements-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .concerts-grid,
+    .portugal-concerts,
+    .festivals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .records-grid,
+    .collab-grid,
+    .trivia-boxes,
+    .achievements-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (min-width: 1200px) {
-    .video-grid { grid-template-columns: repeat(3, 1fr); }
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.achievements-grid { grid-template-columns: 1fr; }
+.achievements-grid {
+    grid-template-columns: 1fr;
+}
 
 @media (min-width: 1024px) {
-    .achievements-grid { grid-template-columns: repeat(4, 1fr); }
+    .achievements-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Membro Card */
-.membro-card, .membro-card-historia {
+.membro-card,
+.membro-card-historia {
     background: var(--surface);
     border-radius: var(--radius);
     padding: 16px;
@@ -986,13 +1257,15 @@ html, body {
     position: relative;
 }
 
-.membro-card:hover, .membro-card-historia:hover {
+.membro-card:hover,
+.membro-card-historia:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 24px rgba(255, 106, 0, 0.4);
     border-color: var(--accent);
 }
 
-.membro-card img, .membro-card-historia img {
+.membro-card img,
+.membro-card-historia img {
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -1000,13 +1273,14 @@ html, body {
     margin-bottom: 12px;
 }
 
-.membro-card h3, .membro-card-historia h3 { 
+.membro-card h3,
+.membro-card-historia h3 {
     color: var(--accent);
     font-size: 1.1rem;
     margin: 8px 0 4px;
 }
 
-.membro-card p { 
+.membro-card p {
     font-size: 0.95rem;
     color: var(--muted);
     margin-bottom: 4px;
@@ -1110,7 +1384,9 @@ html, body {
     transition: transform 0.4s ease;
 }
 
-.video-card:hover::before { transform: scaleX(1); }
+.video-card:hover::before {
+    transform: scaleX(1);
+}
 
 .video-info {
     padding: 20px;
@@ -1124,7 +1400,9 @@ html, body {
     transition: color 0.3s;
 }
 
-.video-card:hover .video-info h3 { color: var(--accent-2); }
+.video-card:hover .video-info h3 {
+    color: var(--accent-2);
+}
 
 .video-album {
     color: var(--accent-2);
@@ -1144,7 +1422,10 @@ html, body {
 }
 
 /* ===== BADGES & STATUS ===== */
-.status-badge, .membro-badge, .card-badge, .highlight-badge {
+.status-badge,
+.membro-badge,
+.card-badge,
+.highlight-badge {
     position: absolute;
     padding: 6px 12px;
     border-radius: 20px;
@@ -1155,9 +1436,22 @@ html, body {
     z-index: 2;
 }
 
-.status-badge, .highlight-badge { top: 12px; right: 12px; }
-.card-badge { top: 16px; right: 16px; }
-.membro-badge { top: 24px; right: 24px; font-size: 0.7rem; }
+.status-badge,
+.highlight-badge {
+    top: 12px;
+    right: 12px;
+}
+
+.card-badge {
+    top: 16px;
+    right: 16px;
+}
+
+.membro-badge {
+    top: 24px;
+    right: 24px;
+    font-size: 0.7rem;
+}
 
 .status-badge.available {
     background: rgba(0, 255, 0, 0.2);
@@ -1171,7 +1465,9 @@ html, body {
     border: 1px solid rgba(255, 0, 0, 0.4);
 }
 
-.highlight-badge, .card-badge, .membro-badge.original {
+.highlight-badge,
+.card-badge,
+.membro-badge.original {
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     color: var(--white);
 }
@@ -1181,8 +1477,15 @@ html, body {
 }
 
 @keyframes pulse-badge {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .membro-badge.new {
@@ -1191,7 +1494,10 @@ html, body {
     animation: pulse-badge 2s ease-in-out infinite;
 }
 
-.highlight-badge { left: 12px; right: auto; }
+.highlight-badge {
+    left: 12px;
+    right: auto;
+}
 
 /* ===== PÁGINAS ESPECÍFICAS ===== */
 
@@ -1210,7 +1516,9 @@ html, body {
     cursor: pointer;
 }
 
-.album-info { text-align: center; }
+.album-info {
+    text-align: center;
+}
 
 @media (min-width: 768px) {
     .album-header {
@@ -1218,7 +1526,10 @@ html, body {
         align-items: flex-start;
         gap: 24px;
     }
-    .album-info { text-align: left; }
+
+    .album-info {
+        text-align: left;
+    }
 }
 
 .album-tracks {
@@ -1227,7 +1538,8 @@ html, body {
     margin-bottom: 32px;
 }
 
-.album-tracks th, .album-tracks td {
+.album-tracks th,
+.album-tracks td {
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
@@ -1259,7 +1571,9 @@ html, body {
     transition: color 0.3s;
 }
 
-.contacto-nav a:hover { color: var(--accent-2); }
+.contacto-nav a:hover {
+    color: var(--accent-2);
+}
 
 .contacto-section {
     scroll-margin-top: 100px;
@@ -1273,7 +1587,8 @@ html, body {
     margin-bottom: 40px;
 }
 
-.form-card, .info-card {
+.form-card,
+.info-card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.3));
     border-radius: var(--radius);
     padding: 32px;
@@ -1317,7 +1632,8 @@ html, body {
     border: none;
 }
 
-.social-links, .social-link {
+.social-links,
+.social-link {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
@@ -1340,7 +1656,9 @@ html, body {
     border-color: var(--accent);
 }
 
-.social-link i { font-size: 1.2rem; }
+.social-link i {
+    font-size: 1.2rem;
+}
 
 /* Vídeos - Navegação */
 .video-nav {
@@ -1413,7 +1731,9 @@ html, body {
 }
 
 @media (min-width: 768px) {
-    .curiosity-feature { grid-template-columns: 1fr 1fr; }
+    .curiosity-feature {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .curiosity-content h3 {
@@ -1422,7 +1742,7 @@ html, body {
     margin-bottom: 16px;
 }
 
-.curiosity-content > p {
+.curiosity-content>p {
     color: var(--muted);
     line-height: 1.8;
     margin-bottom: 24px;
@@ -1447,7 +1767,10 @@ html, body {
     box-shadow: 0 6px 20px rgba(255, 106, 0, 0.3);
 }
 
-.fact-icon { font-size: 2.5rem; flex-shrink: 0; }
+.fact-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
 
 .fact-box h4 {
     color: var(--accent);
@@ -1550,7 +1873,9 @@ html, body {
     font-size: 1.1rem;
 }
 
-.collab-card p, .record-card p, .trivia-box p {
+.collab-card p,
+.record-card p,
+.trivia-box p {
     color: var(--muted);
     line-height: 1.6;
     font-size: 0.95rem;
@@ -1600,7 +1925,9 @@ html, body {
     transform: translateY(-8px) scale(1.02);
 }
 
-.record-card:hover::before { transform: scaleX(1); }
+.record-card:hover::before {
+    transform: scaleX(1);
+}
 
 .record-number {
     font-size: 3rem;
@@ -1620,7 +1947,8 @@ html, body {
 }
 
 /* Legacy & Achievements */
-.legacy-card, .achievement-card {
+.legacy-card,
+.achievement-card {
     background: var(--surface);
     border-radius: var(--radius);
     padding: 32px;
@@ -1635,7 +1963,8 @@ html, body {
     border: 2px solid rgba(255, 106, 0, 0.2);
 }
 
-.legacy-card:hover, .achievement-card:hover {
+.legacy-card:hover,
+.achievement-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 32px rgba(255, 106, 0, 0.3);
 }
@@ -1645,7 +1974,8 @@ html, body {
     border-color: var(--accent);
 }
 
-.legacy-card i, .achievement-icon {
+.legacy-card i,
+.achievement-icon {
     font-size: 3rem;
     color: var(--accent);
     margin-bottom: 16px;
@@ -1656,19 +1986,25 @@ html, body {
     font-size: 3.5rem;
 }
 
-.legacy-card h3, .achievement-card h3 {
+.legacy-card h3,
+.achievement-card h3 {
     color: var(--accent);
     margin-bottom: 12px;
 }
 
-.achievement-card h3 { font-size: 1.2rem; }
+.achievement-card h3 {
+    font-size: 1.2rem;
+}
 
-.legacy-card p, .achievement-card p {
+.legacy-card p,
+.achievement-card p {
     color: var(--muted);
     line-height: 1.6;
 }
 
-.achievement-card p { font-size: 0.9rem; }
+.achievement-card p {
+    font-size: 0.9rem;
+}
 
 /* Legacy Grid específico */
 .legacy-grid {
@@ -1748,10 +2084,14 @@ html, body {
     color: var(--accent-2);
 }
 
-.support-link:hover i { color: var(--white); }
+.support-link:hover i {
+    color: var(--white);
+}
 
 /* Fotos & Galerias */
-.photo-gallery, .fan-gallery, .fanart-gallery {
+.photo-gallery,
+.fan-gallery,
+.fanart-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -1759,7 +2099,12 @@ html, body {
 }
 
 @media (min-width: 768px) {
-    .photo-gallery, .fan-gallery, .fanart-gallery { grid-template-columns: repeat(3, 1fr); }
+
+    .photo-gallery,
+    .fan-gallery,
+    .fanart-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .photo-gallery img {
@@ -1778,7 +2123,8 @@ html, body {
 }
 
 /* Fan Content */
-.fan-messages, .video-tribute {
+.fan-messages,
+.video-tribute {
     margin: 60px auto;
     max-width: var(--container);
 }
@@ -1790,7 +2136,8 @@ html, body {
     margin: 40px auto;
 }
 
-.video-tribute h2, .fan-messages h2 {
+.video-tribute h2,
+.fan-messages h2 {
     text-align: center;
     margin-bottom: 32px;
 }
@@ -1816,7 +2163,8 @@ html, body {
 }
 
 /* Overlays de fotos */
-.photo-overlay, .fanart-info {
+.photo-overlay,
+.fanart-info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1827,11 +2175,13 @@ html, body {
     transition: transform 0.3s;
 }
 
-.fan-photo:hover .photo-overlay, .fanart-item:hover .fanart-info {
+.fan-photo:hover .photo-overlay,
+.fanart-item:hover .fanart-info {
     transform: translateY(0);
 }
 
-.photo-author, .fanart-info .artist {
+.photo-author,
+.fanart-info .artist {
     color: var(--accent);
     font-weight: 700;
     font-size: 0.9rem;
@@ -1959,7 +2309,7 @@ html, body {
     color: var(--accent);
 }
 
-.tribute-banner > p {
+.tribute-banner>p {
     color: var(--muted);
     line-height: 1.8;
     max-width: 800px;
@@ -1991,7 +2341,10 @@ html, body {
     gap: 20px;
 }
 
-.stat-icon { font-size: 3rem; flex-shrink: 0; }
+.stat-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
 
 /* Portugal Cards */
 .portugal-card {
@@ -2033,13 +2386,15 @@ html, body {
     font-size: 1.3rem;
 }
 
-.portugal-info .date, .portugal-info .venue {
+.portugal-info .date,
+.portugal-info .venue {
     color: var(--muted);
     margin-bottom: 8px;
     font-size: 0.9rem;
 }
 
-.portugal-info .date i, .portugal-info .venue i {
+.portugal-info .date i,
+.portugal-info .venue i {
     color: var(--accent-2);
     margin-right: 8px;
 }
@@ -2144,8 +2499,13 @@ html, body {
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .success-message {
@@ -2168,7 +2528,9 @@ html, body {
     border-radius: var(--radius);
 }
 
-.stat-item { text-align: center; }
+.stat-item {
+    text-align: center;
+}
 
 /* ===== FOOTER ===== */
 .site-footer {
@@ -2222,4 +2584,105 @@ html, body {
 .back-to-top:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(255, 106, 0, 0.6);
+}
+
+/* ==========================================================
+   CORREÇÃO FINAL - TIMELINES HISTÓRIA & CONCERTOS
+   Corrige alinhamento, remove duplicações e centraliza
+========================================================== */
+
+/* Ajuste da linha central */
+.timeline-historia::before,
+.timeline-tours::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    border-radius: 2px;
+    z-index: 0;
+}
+
+/* Remove segunda bolinha (duplicada) */
+.timeline-year::after,
+.tour-year::after {
+    display: none !important;
+}
+
+/* Itens base */
+.timeline-item-historia,
+.tour-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Alinhamento à esquerda e à direita */
+.timeline-item-historia:nth-child(odd),
+.tour-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+/* Corrigir o ponto central (apenas 1 bolinha real) */
+.timeline-item-historia::before,
+.tour-item::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline-item-historia:nth-child(odd)::before,
+.tour-item:nth-child(odd)::before {
+    right: -9px;
+}
+
+.timeline-item-historia:nth-child(even)::before,
+.tour-item:nth-child(even)::before {
+    left: -9px;
+}
+
+/* Caixa de conteúdo */
+.timeline-content-historia,
+.tour-content {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+}
+
+/* Responsivo - tudo à esquerda no mobile */
+@media (max-width: 850px) {
+    .timeline-historia::before,
+    .timeline-tours::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item-historia,
+    .tour-item {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    .timeline-item-historia::before,
+    .tour-item::before {
+        left: 10px;
+    }
 }
