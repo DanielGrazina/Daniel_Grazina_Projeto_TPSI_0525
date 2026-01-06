@@ -1,70 +1,73 @@
-# 🎶 Linkin Park - Projeto Escolar
+# 🎶 Linkin Park - Tribute Website
 
-Este projeto é um site desenvolvido como parte de um trabalho escolar,
-com o objetivo de aplicar conhecimentos de **HTML5**, **CSS3** e
-**JavaScript**.\
-O tema escolhido foi a banda **Linkin Park**, explorando a sua história,
-discografia, membros e impacto cultural.
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-👉[Ver Online](https://projetodanielgrazina.netlify.app/)
+> A tribute website developed as a school project to demonstrate **Frontend Development** skills using **HTML5**, **CSS3**, and **JavaScript**.
+>
+> The chosen theme explores the history, discography, members, and cultural impact of the band **Linkin Park**.
 
-------------------------------------------------------------------------
+👉 **[Live Demo](https://projetodanielgrazina.netlify.app/)**
 
-## 📌 Funcionalidades
+---
 
-O site foi desenvolvido para cumprir alguns requisitos:
+## 📌 Features
 
--   ✅ Páginas HTML
--   ✅ Menu de navegação responsivo (hamburger em mobile)
--   ✅ Estrutura com divs e sobreposições
--   ✅ Links internos, externos e âncoras
--   ✅ Tabelas em páginas (Membros, Concertos)
--   ✅ Efeitos **MouseOver** (hover em botões, imagens e links)
--   ✅ Inserção de **Iframes** (YouTube e Google Maps)
--   ✅ Galeria de imagens com **Lightbox**
+The website was built to meet specific technical requirements:
 
-------------------------------------------------------------------------
+- ✅ **Multi-page Structure:** Several interlinked HTML pages.
+- ✅ **Responsive Navigation:** Mobile-friendly menu (Hamburger style).
+- ✅ **Semantic Structure:** Proper use of divs and layout techniques.
+- ✅ **Navigation:** Implementation of internal, external, and anchor links.
+- ✅ **Data Representation:** Usage of Tables (e.g., Members, Concerts pages).
+- ✅ **Interactivity:** **Hover Effects** on buttons, images, and links.
+- ✅ **Media Integration:** **Iframes** for YouTube videos and Google Maps.
+- ✅ **Image Gallery:** Custom **Lightbox** effect for viewing images.
 
-## 📂 Estrutura do Projeto
+---
 
-    📦 projeto-linkinpark
-    ├── index.html
-    ├── paginas/
-    │   ├── historia.html
-    │   ├── discografia.html
-    │   ├── membros.html
-    │   ├── chester.html
-    │   ├── videos.html
-    │   ├── concertos.html
-    │   ├── curiosidades.html
-    │   ├── fans.html
-    │   └── contacto.html
-    ├── css/
-    │   └── style.css
-    ├── js/
-    │   └── script.js
-    ├── img/
-    │   └── (imagens usadas no site)
-    └── README.md
+## 📂 Project Structure
 
-------------------------------------------------------------------------
+```bash
+linkinpark-project/
+├── index.html            # Homepage
+├── paginas/              # Content Pages
+│   ├── historia.html
+│   ├── discografia.html
+│   ├── membros.html
+│   ├── chester.html
+│   ├── videos.html
+│   ├── concertos.html
+│   ├── curiosidades.html
+│   ├── fans.html
+│   └── contacto.html
+├── css/
+│   └── style.css         # Main Stylesheet
+├── js/
+│   └── script.js         # Interactive Logic (Menu, Gallery)
+├── img/                  # Assets and Images
+└── README.md
+```
 
-## 🛠️ Tecnologias Utilizadas
+---
 
--   **HTML5**
--   **CSS3** (Flexbox, Grid, animações, responsividade)
--   **JavaScript** (menu mobile, lightbox, efeitos interativos)
--   **Font Awesome** (ícones)
--   **Google Fonts** (Inter)
+## 🛠️ Tech Stack
 
-------------------------------------------------------------------------
-
-## 📍 Autor
-
-Projeto desenvolvido por **Daniel Grazina**\
-📘 UC00604 - Programar para a web, na vertendte frontend (cliente-side)
+- **HTML5:** Semantic markup.
+- **CSS3:** Flexbox, Grid, Animations, and Media Queries for responsiveness.
+- **JavaScript (Vanilla):** DOM manipulation for the mobile menu and lightbox gallery.
+- **Font Awesome:** Iconography.
+- **Google Fonts:** Typography (Inter font family).
 
 ------------------------------------------------------------------------
 
-⚠️ **Nota**: Este site é apenas um **projeto escolar** e **não é
-oficial** da banda Linkin Park.
+## 📍 Author
+
+**Developed by:** Daniel Grazina 
+📘 UC00604 - Web Programming (Frontend / Client-side)
+
+------------------------------------------------------------------------
+
+⚠️ **Disclaimer:** This website is strictly an educational project and is not officially affiliated with Linkin Park or their management.
